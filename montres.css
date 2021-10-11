@@ -3,43 +3,8 @@ body {
 }
 
 h1 {
-    color: red;
+    color:silver;
     text-align: center;
-}
-
-header, nav, section, footer {
-    margin: 0 auto 0 auto;
-    width: 950px;
-    text-align: center;
-}
-
-header {
-    height: 200px;
-    background: url('banniere.jpg') no-repeat scroll center 0;
-}
-
-nav {
-    margin-top: 178px;
-    width: 99%;
-    float: left;
-}
-
-nav li {
-    display:inline;
-    font-size: 150%;
-}
-
-nav li a {
-    padding: 10px;
-    color: white;
-    background-color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav li a:hover {
-    color: black;
-    background-color: white;
 }
 
 #sectionthema {
@@ -83,36 +48,4 @@ nav li a:hover {
     margin-left: 5px;
     background: transparent url('montrefemme1.png') no-repeat center 0;
     border: white thin solid;
-}
-
-#sectionthema #droite {
-    float:right;
-    width: 33%;
-    background: transparent url('montreenfant1.png') no-repeat center 10px;
-    border: white thin solid;
-}
-
-footer {
-    position: fixed;
-    bottom: 0px;
-    height: 25px;
-    width: 100%;
-    background-color:#2d2d2d; /*Couleur de fond*/
-    color: #bbb;
-    text-align:center;/*texte centré*/
-}
-
-footer p{
-    margin-top: 3px;
-    color: #bbb;
-}
-
-footer a{
-    color: #bbb;
-text-decoration:none;
-}
-
-@font-face{ 
-    font-family: "Fuse";
-    src: url('FUSENORM.TTF') format("truetype");
 }
