@@ -5,7 +5,7 @@ header {
     flex-direction: row; /*Range les élements en rangée (gauche à droite)*/
     justify-content: space-between; /*Créer un espacement entre chaques elements (ici divs) mettant donc le 1er à gauche, l'autre au milieu et le dernier à droite.*/
     align-items: center; /*Facultatif*/
-    width: 100%;
+    width: 100%; /*Le header prend toute la largeur de l'écran*/
     background-color: rgba(0,0,0,.3);
     flex-wrap: wrap; /*responsive*/
 }
@@ -22,7 +22,7 @@ header a {
 
 img {
     height: 70px;
-    padding-left: 20px;
+    padding-left: 1%;
     padding-right: 5rem;
 }
 ul {
