@@ -3,16 +3,20 @@ body {
 }
 
 p {
-    font-size: 110%;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 /*gif qui tourne*/
 #gif {
+    display: flex;
+    position: relative;
     float: right;
-    height: 320px;
+    height: 30rem;
     padding-right: 10px;
     padding-left: 5%;
-    padding-top: 5%;
+    object-fit: contain;
+    width: 100%;
 }
 
 /*texte milieu de page*/
