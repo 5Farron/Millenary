@@ -1,76 +1,35 @@
-body {
-	margin: 0;
-}
+* {box-sizing: border-box;}
 
-
-#principal {
-    height: 350px;
-}
-
-#principal article {
-    padding-top: 10px;
-    width: 72%;
-    height: 100%;
-    text-align: justify;
-    float: left;
-}
-
-#principal article img {
-    float: left;
-}
-
-#principal aside {
-    margin-top: 0;
-    vertical-align: top;
-    width: 27%;
-    float: right;
-    height: 100%;
-}
-
-#principal aside img:first-child{
-    margin-top: 100px;
-}
-
-#principal aside img {
-    margin-left:auto;
-    margin-right:auto;
-    clear: both;
-}
-
-#principal aside p {
-    margin-top: 0;
-}
-legend {
-    background-color: #000;
-    color: #fff;
-    padding: 3px 6px;
-    border: 2px solid white;
-    border-radius: 10px;
-}
-
-.output {
-    font: 1rem 'Fira Sans', sans-serif;
-}
-
-input {
-    margin: .4rem;
-}
-label,
-textarea {
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-textarea {
-    
-    line-height: 0.7;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
     resize: none;
-
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
+input[type=submit] {
+    background-color: #000000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+    background-color: #838383;
+}
+
+.container {
+    min-height: 15vh;
+    margin: 0 10%;
+    border-radius: 5px;
+    background-color: #ffffffa1;
+    padding: 5%;
+    color: whitesmoke;
 }

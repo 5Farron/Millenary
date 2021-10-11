@@ -1,51 +1,52 @@
-body {
-	margin: 0;
-}
-
-p {
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-/*gif qui tourne*/
-#gif {
-    display: flex;
-    position: relative;
-    float: right;
-    height: 30rem;
-    padding-right: 10px;
-    padding-left: 5%;
-    object-fit: contain;
+footer {
+    flex-shrink: 0;
+    border-top: 1px dashed #000;
     width: 100%;
+    background: whitesmoke;
+    color-interpolation-filters: #333;
 }
 
-/*texte milieu de page*/
-#principal article {
+.contenu-footer {
+    width: 1200px;
+    margin: 0 auto;
     display: flex;
-    padding-top: 10px;
-    width: 100%;
-    height: 100%;
-    text-align: justify;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 100px;
 }
-#principal article img {
-    margin-left: 1rem;
+
+.bloc {
+    width: 25%;
+    margin: 0 30px;
 }
-#principal aside {
-    margin-top: 0;
-    vertical-align: top;
-    width: 27%;
-    float: right;
-    height: 100%;
+
+.footer-contact h3,
+.footer-services h3,
+.footer-horaires h3,
+.footer-medias h3 {
+    font-size: 25px;
+    padding-bottom: 20px;
 }
-#principal aside img:first-child{
-    margin-top: 100px;
-    float: right;
+
+.footer-contact p {
+    padding: 5px 0;
 }
-#principal aside img {
-    margin-left:auto;
-    margin-right:auto;
-    clear: both;
+
+.liste-services,
+.liste-horaires {
+    list-style-type: none;
 }
-#principal aside p {
-    margin-top: 0;
+
+.liste-services li {
+    padding: 20px;
+}
+
+.liste-services a {
+    text-decoration: none;
+    color: #333;
+}
+
+.liste-services a:hover {
+    color: rgb(3,3,3);
 }

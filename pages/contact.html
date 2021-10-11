@@ -1,93 +1,58 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="fr-FR">
     <head>
         <title>MILLENARY</title>
         <meta charset="UTF-8" />
         <meta name="author" content="BTS SIO" />
-        <link rel="stylesheet" href="../css/contact.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600">
         <link rel="stylesheet" href="../css/header.css" />
+        <link rel="stylesheet" href="../css/contact.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                background: url(../images/montrecollection4.jpg) no-repeat;
+                background-size: cover;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100vh;
+            }
+        </style>
     </head>
+
     <body>
-        <header>
+        <div class="header">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="collection.html">Collection</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+
+        <div class="container">
+            <h2>Formulaire de Contact</h2>
             <br>
-            <br>
-            <nav id="navm">
-                <ul>
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="montres.html">Nos montres</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <form class="Barre_de_recherche">
-                    <input class="Recherche" type="text" name="Recherche" placeholder="Recherche">
-                    <button class="Bouton_de_recherche" type="submit" href="#">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </form>
-            </nav>
-        </header>
-        <section id="principal">
-            <article>
-                   <br/>
-                   <br/>
-                    <form>
-                        <fieldset>
-                          <legend>Choisir votre motif de contact</legend>
-                      
-                          <input type="radio" id="kraken" name="monster">
-                          <label for="kraken">Service de livraison</label><br/>
-                      
-                          <input type="radio" id="sasquatch" name="monster">
-                          <label for="sasquatch">Service commercial</label><br/>
-                      
-                          <input type="radio" id="mothman" name="monster">
-                          <label for="mothman">Autre</label>
-                        </fieldset>
-                    </form>
-                            <br />   
-                            <label for="nom">Votre Nom :</label>
-                            <textarea id="nom" name="nom"
-                            rows="3" cols="95"></textarea>                      
-                            
-                            <br/>
-                            <br/>
-                            <br/>
-                            <label for="prenom">Votre Prénom :</label>
-                            <textarea id="prenom" name="prenom"
-                            rows="3" cols="95"></textarea>
-                            
-                            <br />
-                            <br/>
-                            <br/>
-                            <label for="adresse">Votre Adresse :</label>
-                            <textarea id="adresse" name="adresse"
-                            rows="3" cols="95"></textarea>
-                            
-                            <br /> 
-                            <br/>
-                            <br/> 
-                            <label for="telephone">Votre Téléphone :</label>
-                            <textarea id="telephone" name="telephone"
-                            rows="3" cols="95" minlength="10" maxlength="10" placeholder="Votre téléphone"> </textarea>                             
-                           
-                            <br/>
-                            <br/>
-                            <br/>
-                            <label for="mail">Votre Adresse mail :</label>
-                            <textarea id="mail" name="mail"
-                            rows="3" cols="95" ></textarea>                       
-                                <input type="checkbox" name="choix1" value="1" checked >en cochant cette case vous acceptez les Conditions d'utilisation  
-                            <br/>
-                                           
-                                <FORM>
-                                <INPUT type="button" name="nom" value= "Envoyez votre demande"
-                                onclick="alert('demande envoyé !')">
-                                </FORM>
-                            <br/>
-                            <br/>
-                            <br/>
-                            
-            </article>
-        </section>
-        <footer><a href="conditions.html">Conditions d'utilisation</a><p></p></footer>
+            <form action="/action_page.php">
+                <label for="fname">Prénom</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Nom de Famille</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="country">Pays</label>
+                <select id="country" name="country">
+                    <option value="australia">France</option>
+                    <option value="canada">Suisse</option>
+                    <option value="usa">Angleterre</option>
+                    <option value="usa">Allemagne</option>
+                </select>
+
+                <label for="subject">Sujet</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+
     </body>
 </html>
