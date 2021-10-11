@@ -3,11 +3,15 @@
 body {
     background: url(../images/montrecollection4.jpg) no-repeat;
     background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     height: 100vh;
 }
 
-input[type=text], select, textarea {
+h2 {
+    color: #000000;
+}
+
+.formulaire input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid black;
@@ -17,9 +21,10 @@ input[type=text], select, textarea {
     margin-bottom: 16px;
     resize: vertical;
     resize: none;
+    font-family: 'Raleway', sans-serif;
 }
 
-input[type=submit] {
+.formulaire input[type=submit] {
     background-color: #000000;
     color: white;
     padding: 12px 20px;
@@ -28,15 +33,14 @@ input[type=submit] {
     cursor: pointer;
 }
 
-    input[type=submit]:hover {
-    background-color: #838383;
+.formulaire input[type=submit]:hover {
+    background-color: #353535;
 }
 
 .container {
     min-height: 15vh;
-    margin: 0 10%;
+    margin: 3% 8%;
     border-radius: 5px;
     background-color: #ffffffa1;
-    padding: 5%;
-    color: whitesmoke;
+    padding: 4%;
 }

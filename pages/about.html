@@ -7,32 +7,104 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600">
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/about.css" />
+        <script src="https://kit.fontawesome.com/f864103c2e.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <div class="header">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="collection.html">Collection</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+
+        <!-- DEBUT DU HEADER -->
+        <header>
+            <div>
+                <img src="../images/logo.png">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">A propos de nous</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a class="btn" onclick="document.querySelector('#signUp').classList.add('active');">S'inscrire</a></li>
+                    <li><a onclick="document.querySelector('#signIn').classList.add('active');">Se connecter</a></li>
+                </ul>       
+            </div>
+
+            <!-- S'inscrire' Popup -->
+            <div class="modal" id="signUp">
+                <div class="container">
+                    <a class="close" onclick="document.querySelector('#signUp').classList.remove('active');"><i class="fas fa-times"></i></a>
+                    <form>
+                        <h1 class="title">S'inscrire</h1>
+                        <div class="form-group">
+                            <i class="fas fa-at"></i>
+                            <input type="email" placeholder="Email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="form-group">
+                            <i class="far fa-user"></i>
+                            <input type="text" placeholder="Nom" required>
+                            <label>Nom</label>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Mot de passe" required>
+                            <label>Mot de passe</label>
+                        </div>
+                        <input class="form-confirm" href="#" type="submit" value="Créer">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Se connecter -->
+            <div class="modal" id="signIn">
+                <div class="container">
+                    <a class="close" onclick="document.querySelector('#signIn').classList.remove('active');"><i class="fas fa-times"></i></a>
+                    <form>
+                        <h1 class="title">Se connecter</h1>
+                        <div class="form-group">
+                            <i class="far fa-user"></i>
+                            <input type="text" placeholder="Nom" required>
+                            <label>Nom</label>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Mot de passe" required>
+                            <label>Mot de passe</label>
+                        </div>
+                        <input class="form-confirm" href="#" type="submit" value="Connexion">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!-- FIN DU HEADER -->
+
         <div class="main">
             <section id="principal">
                 <article>
                     <div>
-                        <p>Accessoire de mode, la montre de nos jours est très populaire. Du plus grand au plus petit, arborer cet objet sur 
+                        <p>
+                            Millenary, fondée en 2020 par Samuel Faria et Tony Leclerc, est une manufacture d'horlogerie française, installée en Mayenne
+                            dans la ville de Laval. La marque, présente dans 4 pays reservée uniquement aux européens de pays riches, compte 1 600 collaborateurs.
+                            La manufacture dispose d'une dizaine de filiales ainsi que d'une boutique en ligne. La maison produit en moyenne 40 000 pièces par an,
+                            toutes confectionnées à la main.
+                        </p>
+                        <p>
+                            Accessoire de mode, la montre de nos jours est très populaire. Du plus grand au plus petit, arborer cet objet sur 
                             son poignet semble provoquer une certaine fierté. Réflexe utile ou agréable, la nécessité de porter une montre n’est 
                             pas toujours avérée. Ce geste, pourtant si anodin, s’est imposé au quotidien, qu’il est devenu une habitude.
                         </p>
-                        <p>On a coutume de dire que la perfection se lit dans les détails. Ils sont nombreux à le matérialiser cette pensée en 
+                        <p>
+                            On a coutume de dire que la perfection se lit dans les détails. Ils sont nombreux à le matérialiser cette pensée en 
                             veillant à toujours donner une touche d’originalité à leur allure. La montre, dans toute sa discrétion, réussit à 
                             vêtir la personne qui la porte d’une élégance incontestable. Sur un homme comme sur une femme, elle possède un 
                             certain attrait qui fait d’elle une arme de séduction. Voilà pourquoi il faut savoir choisir celle qui s’accorde le 
                             mieux à sa personnalité.
                         </p>
-                        <p>Certaines montres ont été conçues tel un chef-d’œuvre d’art. Leur originalité leur donne une authenticité qui les 
+                        <p>
+                            Certaines montres ont été conçues tel un chef-d’œuvre d’art. Leur originalité leur donne une authenticité qui les 
                             rend uniques. Généralement présent au cours de la vie, la montre fait partie intégrante de son propriétaire. S’en 
                             séparer serait comme couper une partie de soi. Cet accessoire peut aussi devenir un symbole de souvenirs ou un bijou 
                             de famille. Il est mieux d’investir dans un accessoire qui peut traverser des générations dans le respect des 
