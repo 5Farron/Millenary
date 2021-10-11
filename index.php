@@ -11,17 +11,14 @@
 
     <body>
         <?php
-            session_start();
-
+       
             include 'pagesphp/connexion.php';
-            include 'pagesphp/index.php';
             include 'pagesphp/header.php';
-
             if (isset($_GET['categorie']) )
             {
                 switch ($_GET['categorie'])
                 {
-                    default : 
+                    default :
 
                     case 1 : include 'pagesphp/index.php';
                     break;
@@ -38,9 +35,7 @@
 
                     case 5 : include 'pagesphp/profil.php';
                     break;
-
-                    case 6 : include 'pagesphp/panier.php';
-                    break;
+                    
                 }
             }
         ?>

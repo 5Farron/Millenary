@@ -1,188 +1,189 @@
 *{margin: 0;}
 @media screen and (max-width:2560px) {
-    header {
-        display: flex; /*Met en flex, pour pouvoir faire le code ci-dessous*/
-        flex-direction: row; /*Range les élements en rangée (gauche à droite)*/
-        justify-content: space-between; /*Créer un espacement entre chaques elements (ici divs) mettant donc le 1er à gauche, l'autre au milieu et le dernier à droite.*/
-        align-items: center; /*Facultatif*/
-        width: 100%; /*Le header prend toute la largeur de l'écran*/
-        background-color: rgba(0,0,0,.3);
-        flex-wrap: wrap; /*responsive*/
+header {
+    display: flex; /*Met en flex, pour pouvoir faire le code ci-dessous*/
+    flex-direction: row; /*Range les élements en rangée (gauche à droite)*/
+    justify-content: space-between; /*Créer un espacement entre chaques elements (ici divs) mettant donc le 1er à gauche, l'autre au milieu et le dernier à droite.*/
+    align-items: center; /*Facultatif*/
+    width: 100%; /*Le header prend toute la largeur de l'écran*/
+    background-color: rgba(0,0,0,.3);
+    flex-wrap: wrap; /*responsive*/
+}
+
+header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 68.2%;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+img {
+    height: 65px;
+    padding-left: 1%;
+    padding-right: 5rem;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap; /*responsive*/
+}
+
+ul li {
+    padding: 25px;
+    transition: background-color ease 0.5s;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color: #211b4385;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
     }
 
-    header a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 83.56%;
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: 2px;
-        font-weight: 600;
+    to {
+        transform: scale(1);
     }
+}
 
-    img {
-        height: 65px;
-        padding-left: 1%;
-        padding-right: 5rem;
-    }
-    ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        flex-wrap: wrap; /*responsive*/
-    }
+.modal {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 999;
+}
 
-    ul li {
-        padding: 25px;
-        transition: background-color ease 0.5s;
-        cursor: pointer;
-    }
+.modal.active {
+    visibility: visible;
+}
 
-    ul li:hover {
-        background-color: #211b4385;
-    }
+.modal.active .container {
+    animation: 0.5s scaleUp;
+}
 
-    @keyframes scaleUp {
-        from {
-            transform: scale(0);
-        }
+.modal .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+}
 
-        to {
-            transform: scale(1);
-        }
-    }
+.modal .container .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.8rem;
+    color: #000000;
+    cursor: pointer;
+}
 
-    .modal {
-        visibility: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: grid;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.4);
-        z-index: 999;
-    }
+a{
+    text-decoration: none;
+}
+a .btn{
+    display: inline-block;
+    margin: auto;
+}
 
-    .modal.active {
-        visibility: visible;
-    }
+.modal .container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem 3.5rem;
+    width: 300px;
+}
 
-    .modal.active .container {
-        animation: 0.5s scaleUp;
-    }
+.modal .container .title {
+    text-align: center;
+}
 
-    .modal .container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        justify-self: center;
-        padding: 0.5rem;
-        border-radius: 4px;
-        background-color: white;
-        font-family: 'Raleway', sans-serif;
-    }
+.modal .form-group {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 0.3rem;
+    margin-top: 3rem;
+    border-bottom: 2px solid gray;
+    color: gray;
+    transition: color 0.2s, border-color 0.2s;
+}
 
-    .modal .container .close{
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 0.8rem;
-        color: #000000;
-        cursor: pointer;
-    }
+.modal .form-group i {
+    margin-right: 6px;
+}
+.fa, .fas {
+    font-weight: 900;
+}
 
-    a{
-        text-decoration: none;
-    }
-    a .btn{
-        display: inline-block;
-        margin: auto;
-    }
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.modal .form-group {
+    color: gray;
+}
 
-    .modal .container form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 2.5rem 3.5rem;
-        width: 300px;
-    }
+.modal .form-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+.modal .form-group {
+    color: gray;
+}
 
-    .modal .container .title {
-        text-align: center;
-    }
+.modal .form-group:focus-within, .modal .form-group:focus-within input {
+    color: #000000;
+    border-color: #000000;
+}
 
-    .modal .form-group {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        padding-bottom: 0.3rem;
-        margin-top: 3rem;
-        border-bottom: 2px solid gray;
-        color: gray;
-        transition: color 0.2s, border-color 0.2s;
-    }
+.modal .form-group label {
+    position: absolute;
+    left: 1.6rem;
+    font-size: 0.8rem;
+    transition: transform 0.2s, font 0.2s;
+}
 
-    .modal .form-group i {
-        margin-right: 6px;
-    }
-    .fa, .fas {
-        font-weight: 900;
-    }
+.modal .form-confirm {
+    width: 50%;
+    padding: 0.7rem 1rem;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: #555555;
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
 
-    .fa, .fab, .fad, .fal, .far, .fas {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        line-height: 1;
-    }
-    .modal .form-group {
-        color: gray;
-    }
+input[type=submit]:hover {
+    background-color: #353535;
+}
 
-    .modal .form-group input {
-        width: 100%;
-        border: none;
-        outline: none;
-        z-index: 1;
-    }
-    .modal .form-group {
-        color: gray;
-    }
-
-    .modal .form-group:focus-within, .modal .form-group:focus-within input {
-        color: #000000;
-        border-color: #000000;
-    }
-
-    .modal .form-group label {
-        position: absolute;
-        left: 1.6rem;
-        font-size: 0.8rem;
-        transition: transform 0.2s, font 0.2s;
-    }
-
-    .modal .form-confirm {
-        width: 50%;
-        padding: 0.7rem 1rem;
-        margin-top: 2.5rem;
-        font-size: 1rem;
-        border: none;
-        outline: none;
-        border-radius: 50px;
-        background-color: #555555;
-        color: white;
-        text-align: center;
-        font-family: 'Raleway', sans-serif;
-    }
-
-    input[type=submit]:hover {
-        background-color: #353535;
-    }
 }
