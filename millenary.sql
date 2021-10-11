@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 07 jan. 2021 à 14:52
+-- Généré le :  jeu. 04 fév. 2021 à 16:08
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.4.0
 
@@ -85,10 +85,25 @@ DROP TABLE IF EXISTS `client`;
 CREATE TABLE IF NOT EXISTS `client` (
   `numclient` int(11) NOT NULL AUTO_INCREMENT,
   `nomclient` varchar(50) NOT NULL,
-  `prenomclient` varchar(50) NOT NULL,
   `emailclient` varchar(50) NOT NULL,
-  PRIMARY KEY (`numclient`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `mdpclient` varchar(255) NOT NULL,
+  PRIMARY KEY (`numclient`),
+  UNIQUE KEY `emailclient` (`emailclient`)
+) ENGINE=InnoDB AUTO_INCREMENT=169 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `client`
+--
+
+INSERT INTO `client` (`numclient`, `nomclient`, `emailclient`, `mdpclient`) VALUES
+(100, 'Samuel', 'chat@gmail.com', '123456'),
+(107, 'nathan', 'nathan@gmail.com', '123456'),
+(114, 'elias', 'elias@gmail.com', '12456'),
+(157, 'elicule', 'elicule@gmail.com', 'elicule'),
+(158, 'starwix', 'starwix@gmail.com', 'starwix'),
+(161, 'marius', 'marius@gmail.com', 'marius'),
+(162, 'emerick', 'emerick@gmail.com', 'emerick'),
+(164, 'thais', 'thais@gmail.com', 'thais');
 
 -- --------------------------------------------------------
 
@@ -105,21 +120,21 @@ CREATE TABLE IF NOT EXISTS `montre` (
   `numcategorie` int(11) NOT NULL,
   PRIMARY KEY (`nummontre`),
   KEY `numcategorie` (`numcategorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `montre`
 --
 
 INSERT INTO `montre` (`nummontre`, `libellemontre`, `descrptionmontre`, `prixmontre`, `numcategorie`) VALUES
-(1, 'DATEJUST 31', 'Oyster, 31 mm, acier Oystersteel, or gris et diamants, Nouveau modèle 2020', 15200, 1),
-(2, 'SUBARINER', 'RSREHSRE', 7650, 1),
-(3, 'SKY-DWELLER', 'Oyster, 42 mm, or jaune, Nouveau modèle 2020', 37700, 1),
+(1, 'DATEJUST 31', 'Oyster, 31 mm, acier Oystersteel, or gris et diamants', 15200, 1),
+(2, 'SUBARINER', 'Oyster, 41 mm, acier Oystersteel', 7650, 1),
+(3, 'SKY-DWELLER', 'Oyster, 42 mm, or jaune', 37700, 1),
 (4, 'GMT - MASTER II', 'Oyster, 40 mm, acier Oystersteel et or Everose', 13950, 1),
 (5, 'COSMOGRAPH DAYTONA', 'Oyster, 40 mm, or gris', 28000, 2),
 (6, 'EXPLORER', 'Oyster, 39 mm, acier Oystersteel', 6150, 2),
 (7, 'MILGAUSS', 'Oyster, 40 mm, acier Oystersteel', 7850, 2),
-(8, 'OYSTER PERPETUAL 41', 'Oyster, 41 mm, acier Oystersteel, Nouveau modèle 2020', 5550, 2);
+(8, 'OYSTER PERPETUAL 41', 'Oyster, 41 mm, acier Oystersteel', 5550, 2);
 
 --
 -- Contraintes pour les tables déchargées

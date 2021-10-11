@@ -1,17 +1,12 @@
-<?php
-$req=$pdo->prepare("SELECT * FROM client WHERE numclient =".$_GET['numclient']);
-$req->execute();
-$result=$req->fetchAll();
-?>
 <link rel="stylesheet" href="css/profil.css" />
 
 <div class="container">
 
     <h2>Votre profil</h2>
+     
+    <?php echo 'Votre adresse mail : ', $_SESSION['personne']['email']; ?> <br>
+    <?php echo 'Votre nom d\'utilisateur : ', $_SESSION['personne']['nom']; ?> <br>
+    <?php echo 'Votre numéro d\'utilisateur : ', $_SESSION['personne']['num']; ?>
+    
 
-    <li>Votre nom : <?= $result[0]['nomclient'] ?> </li>
-    <li>Votre e-mail : <?= $result[0]['emailclient'] ?></li>
-    <li>Votre numero : <?= $result[0]['numclient'] ?></li>
-    <br>
-    <h2>Votre panier</h2>
-    <div class="containerbis">
+</div>

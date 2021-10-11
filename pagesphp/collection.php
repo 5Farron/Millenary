@@ -16,6 +16,9 @@
                // var_dump($montre[$i]);
     ?>
     <a class="carousel-article">
+    <div>
+        <input type="submit" class="achat" value="Acheter">
+    </div>
     <img src="images/montre<?= ($j==1)?($i+5):($i+1)?>.webp">
     <div class="info">
         <h2><?= $montre[$i]['libellemontre'] ?></h2>
