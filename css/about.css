@@ -1,7 +1,14 @@
+body {
+    background: url(../images/montrecollection3.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Roboto-ThinItalic';
+}
+
 .main {
     display: flex;
     flex-direction: column;
-    background-color: rgba(231, 231, 231, 0.616);
+    background-color: rgba(231, 231, 231, 0.781);
     min-height: 15vh;
     margin: 0px 50px;
     padding: 2%;
@@ -31,6 +38,8 @@ p {
     color: black;
     font-size: 1.3rem;
     font-weight: 600;
+    margin-top: 2%;
+    margin-bottom: 4%;
 }
 
 @font-face {

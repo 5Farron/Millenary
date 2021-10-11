@@ -1,0 +1,14 @@
+body {
+    background: url(../images/montrecollection1.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.vide {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: rgb(51, 47, 47);
+}

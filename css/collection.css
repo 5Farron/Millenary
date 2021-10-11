@@ -1,7 +1,14 @@
+body {
+    background: url(../images/montrecollection2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+}
+
 .main {
     display: flex;
     flex-direction: column;
-    background-color: rgba(231, 231, 231, 0.411);
+    background-color: rgb(255, 255, 255);
     min-height: 80vh;
     margin: 3% 50px 3% 50px;
     padding: 2%;
@@ -11,6 +18,7 @@
     font-size: 1.8rem;
     font-weight: 600;
     color: black;
+    font-family: 'Raleway', sans-serif;
 }
 
 .main .ads {
@@ -29,8 +37,8 @@
 .carousel-article {
     flex-direction: row;
     position: relative;
-    width: 250px;
-    height: 350px;
+    width: 40%;
+    height: 450px;
     box-shadow: 0 0 12px #0000000c;
     border-radius: 8px;
     transition: box-shadow linear 0.1s;
@@ -39,11 +47,7 @@
 
 .carousel-article:hover {
     cursor: pointer;
-}
-
-.carousel-article:hover > .info h1 {
-    transition: color linear 0.1s;
-    color: silver;
+    border: 1px solid black;
 }
 
 .carousel-article img {
@@ -55,7 +59,7 @@
 .carousel-article .info {
     width: 100%;
     height: 25%;
-    padding-left: 10px;
+    padding: 10px;
 }
 
 .carousel-article .info h1 {
@@ -63,6 +67,7 @@
     font-size: 1.7rem;
     font-weight: bold;
     color: black;
+    font-family: 'Roboto-ThinItalic';
 }
 
 .carousel-article .info h2 {
@@ -70,13 +75,15 @@
     font-size: 1.2rem;
     font-weight: 600;
     color: black;
+    font-family: 'Raleway', sans-serif;
 }
 
 .carousel-article .info h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     color: black;
+    font-family: 'Raleway', sans-serif;
 }
 
 hr{
@@ -86,3 +93,8 @@ hr{
     background-color: black;
     border: none;
   }
+
+@font-face {
+    font-family: 'Roboto-ThinItalic';
+    src: url(../fonts/Roboto-Thin.ttf) format('truetype');
+}
