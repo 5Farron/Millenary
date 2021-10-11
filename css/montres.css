@@ -29,23 +29,23 @@ h1 {
 	text-decoration: none;
 }
 
-#sectionthema #gauche:hover, #sectionthema #milieu:hover, #sectionthema #droite:hover {
-    border: black thin solid;
-    border-radius: 10px;
-    background-color: #ededed;
-}
-
 #sectionthema #gauche {
     float:left;
     width: 33%;
-    background: transparent url('montrehomme1.jpg') no-repeat center 10px;
+    background: transparent url('../images/montrehomme.jpg') no-repeat center 10px;
     border: white thin solid;
+    border-radius: 10px;
 }
 
 #sectionthema #milieu {
     float: left;
     width: 32%;
     margin-left: 5px;
-    background: transparent url('montrefemme1.png') no-repeat center 0;
+    background: transparent url('../images/montrefemme.png') no-repeat center 0;
     border: white thin solid;
+    border-radius: 10px;
+}
+
+#sectionthema #gauche:hover, #sectionthema #milieu:hover, #sectionthema #droite:hover {
+    border: black thin solid;
 }

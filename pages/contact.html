@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html lang="fr-FR">
+    <head>
+        <title>MILLENARY</title>
+        <meta charset="UTF-8" />
+        <meta name="author" content="BTS SIO" />
+        <link rel="stylesheet" href="../css/contact.css" />
+        <link rel="stylesheet" href="../css/header.css" />
+    </head>
+    <body>
+        <header>
+            <br>
+            <br>
+            <nav id="navm">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="montres.html">Nos montres</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <form class="Barre_de_recherche">
+                    <input class="Recherche" type="text" name="Recherche" placeholder="Recherche">
+                    <button class="Bouton_de_recherche" type="submit" href="#">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </nav>
+        </header>
+        <section id="principal">
+            <article>
+                   <br/>
+                   <br/>
+                    <form>
+                        <fieldset>
+                          <legend>Choisir votre motif de contact</legend>
+                      
+                          <input type="radio" id="kraken" name="monster">
+                          <label for="kraken">Service de livraison</label><br/>
+                      
+                          <input type="radio" id="sasquatch" name="monster">
+                          <label for="sasquatch">Service commercial</label><br/>
+                      
+                          <input type="radio" id="mothman" name="monster">
+                          <label for="mothman">Autre</label>
+                        </fieldset>
+                    </form>
+                            <br />   
+                            <label for="nom">Votre Nom :</label>
+                            <textarea id="nom" name="nom"
+                            rows="3" cols="95"></textarea>                      
+                            
+                            <br/>
+                            <br/>
+                            <br/>
+                            <label for="prenom">Votre Prénom :</label>
+                            <textarea id="prenom" name="prenom"
+                            rows="3" cols="95"></textarea>
+                            
+                            <br />
+                            <br/>
+                            <br/>
+                            <label for="adresse">Votre Adresse :</label>
+                            <textarea id="adresse" name="adresse"
+                            rows="3" cols="95"></textarea>
+                            
+                            <br /> 
+                            <br/>
+                            <br/> 
+                            <label for="telephone">Votre Téléphone :</label>
+                            <textarea id="telephone" name="telephone"
+                            rows="3" cols="95" minlength="10" maxlength="10" placeholder="Votre téléphone"> </textarea>                             
+                           
+                            <br/>
+                            <br/>
+                            <br/>
+                            <label for="mail">Votre Adresse mail :</label>
+                            <textarea id="mail" name="mail"
+                            rows="3" cols="95" ></textarea>                       
+                                <input type="checkbox" name="choix1" value="1" checked >en cochant cette case vous acceptez les Conditions d'utilisation  
+                            <br/>
+                                           
+                                <FORM>
+                                <INPUT type="button" name="nom" value= "Envoyez votre demande"
+                                onclick="alert('demande envoyé !')">
+                                </FORM>
+                            <br/>
+                            <br/>
+                            <br/>
+                            
+            </article>
+        </section>
+        <footer><a href="conditions.html">Conditions d'utilisation</a><p></p></footer>
+    </body>
+</html>
