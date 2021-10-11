@@ -1,0 +1,118 @@
+body {
+	margin: 0;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+header, nav, section, footer {
+    margin: 0 auto 0 auto;
+    width: 950px;
+    text-align: center;
+}
+
+header {
+    height: 200px;
+    background: url('banniere.jpg') no-repeat scroll center 0;
+}
+
+nav {
+    margin-top: 178px;
+    width: 99%;
+    float: left;
+}
+
+nav li {
+    display:inline;
+    font-size: 150%;
+}
+
+nav li a {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: black;
+    background-color: white;
+}
+
+#sectionthema {
+    margin: 50px auto 200px auto;
+    height: 150px;
+}
+
+#sectionthema article {
+    width: 33%;
+    height: 256px;
+}
+
+#sectionthema a {
+    font-family: 'Fuse';
+    font-size: xx-large;
+    font-weight:400;
+    margin-top: 0;
+	display:block;
+	width:100%;
+	height:100%;
+	color: black;
+	text-decoration: none;
+}
+
+#sectionthema #gauche:hover, #sectionthema #milieu:hover, #sectionthema #droite:hover {
+    border: black thin solid;
+    border-radius: 10px;
+    background-color: #ededed;
+}
+
+#sectionthema #gauche {
+    float:left;
+    width: 33%;
+    background: transparent url('casqueroute.png') no-repeat center 10px;
+    border: white thin solid;
+}
+
+#sectionthema #milieu {
+    float: left;
+    width: 32%;
+    margin-left: 5px;
+    background: transparent url('casquecross.png') no-repeat center 0;
+    border: white thin solid;
+}
+
+#sectionthema #droite {
+    float:right;
+    width: 33%;
+    background: transparent url('casquepiste.png') no-repeat center 10px;
+    border: white thin solid;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    height: 25px;
+    width: 100%;
+    background-color:#2d2d2d; /*Couleur de fond*/
+    color: #bbb;
+    text-align:center;/*texte centré*/
+}
+
+footer p{
+    margin-top: 3px;
+    color: #bbb;
+}
+
+footer a{
+    color: #bbb;
+text-decoration:none;
+}
+
+@font-face{ 
+    font-family: "Fuse";
+    src: url('FUSENORM.TTF') format("truetype");
+}
