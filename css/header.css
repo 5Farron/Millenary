@@ -1,5 +1,5 @@
 *{margin: 0;}
-
+@media screen and (max-width:2560px) {
 header {
     display: flex; /*Met en flex, pour pouvoir faire le code ci-dessous*/
     flex-direction: row; /*Range les élements en rangée (gauche à droite)*/
@@ -14,14 +14,14 @@ header a {
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
-    font-size: 20px;
+    font-size: 85%;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 2px;
     font-weight: 600;
 }
 
 img {
-    height: 70px;
+    height: 65px;
     padding-left: 1%;
     padding-right: 5rem;
 }
@@ -184,4 +184,6 @@ a .btn{
 
 input[type=submit]:hover {
     background-color: #353535;
+}
+
 }

@@ -13,12 +13,14 @@
         <?php
 
             include 'pagesphp/connexion.php';
-            include 'pagesphp/head.php';
+            include 'pagesphp/index.php';
+            include 'pagesphp/header.php';
+
             if (isset($_GET['categorie']) )
             {
                 switch ($_GET['categorie'])
                 {
-                    default :
+                    default : 
 
                     case 1 : include 'pagesphp/index.php';
                     break;

@@ -21,25 +21,32 @@
     <div class="modal" id="signUp">
         <div class="container">
             <a class="close" onclick="document.querySelector('#signUp').classList.remove('active');"><i class="fas fa-times"></i></a>
-            <form>
+            <form method="GET">
                 <h1 class="title">S'inscrire</h1>
-                <div class="form-group">
-                    <i class="fas fa-at"></i>
-                    <input type="email" placeholder="Email" required>
-                    <label>Email</label>
-                </div>
+                <input type="hidden" name="inscription" >
                 <div class="form-group">
                     <i class="far fa-user"></i>
-                    <input type="text" placeholder="Nom" required>
+                    <input type="text" name="nom" placeholder="Nom" required>
                     <label>Nom</label>
                 </div>
                 <div class="form-group">
+                    <i class="fas fa-at"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label>Email</label>
+                </div>
+                <div class="form-group">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Mot de passe" required>
+                    <input type="password" name="mdp" placeholder="Mot de passe" required>
                     <label>Mot de passe</label>
                 </div>
-                <input class="form-confirm" href="#" type="submit" value="Créer">
+                <input class="form-confirm" type="submit" value="Créer">
             </form>
+            <?php
+            if (isset($_GET['inscription'])) {
+                $req = $pdo->prepare("INSERT INTO client (nomclient, emailclient, mdpclient) values('".$_GET['nom']."', '".$_GET['email']."', '".$_GET['mdp']."')");
+                if($req->execute()) header("location: profil.php");  else echo "<script>alert('Erreur lors de la création de votre compte');</script>";
+            }
+            ?>
         </div>
     </div>
 
@@ -50,9 +57,9 @@
             <form>
                 <h1 class="title">Se connecter</h1>
                 <div class="form-group">
-                    <i class="far fa-user"></i>
-                    <input type="text" placeholder="Nom" required>
-                    <label>Nom</label>
+                    <i class="fas fa-at"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label>Email</label>
                 </div>
                 <div class="form-group">
                     <i class="fas fa-lock"></i>
