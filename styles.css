@@ -5,9 +5,10 @@ body {
 
 header, nav, section, footer {
     margin: 0 auto 0 auto;
-    width: 950px;
+    width: 85vw;
     text-align: center;
 }
+
 header {
     height: 200px;
     background: url('banniere.jpg') no-repeat scroll center 0;
@@ -44,14 +45,14 @@ nav li a:hover {
 
 
 #principal article {
+    display: flex;
     padding-top: 10px;
-    width: 72%;
+    width: 100%;
     height: 100%;
     text-align: justify;
-    float: left;
 }
 #principal article img {
-    float: right;
+    margin-left: 1rem;
 }
 #principal aside {
     margin-top: 0;
