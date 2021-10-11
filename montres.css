@@ -73,7 +73,7 @@ nav li a:hover {
 #sectionthema #gauche {
     float:left;
     width: 33%;
-    background: transparent url('casqueroute.png') no-repeat center 10px;
+    background: transparent url('montrehomme1.jpg') no-repeat center 10px;
     border: white thin solid;
 }
 
@@ -81,14 +81,14 @@ nav li a:hover {
     float: left;
     width: 32%;
     margin-left: 5px;
-    background: transparent url('casquecross.png') no-repeat center 0;
+    background: transparent url('montrefemme1.png') no-repeat center 0;
     border: white thin solid;
 }
 
 #sectionthema #droite {
     float:right;
     width: 33%;
-    background: transparent url('casquepiste.png') no-repeat center 10px;
+    background: transparent url('montreenfant1.png') no-repeat center 10px;
     border: white thin solid;
 }
 
