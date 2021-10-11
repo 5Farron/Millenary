@@ -4,7 +4,7 @@
         <article>
             <div>
                 <p>
-                    Millenary, fondée en 2020 par Samuel Faria et Nathan Barré, est une manufacture d'horlogerie française, installée en Mayenne
+                    Millenary, fondée en 2020 par Samuel Faria, Tony Leclerd et Nathan Barré, est une manufacture d'horlogerie française, installée en Mayenne
                     dans la ville de Laval. La marque, présente dans 4 pays reservée uniquement aux européens de pays riches, compte 1 600 collaborateurs.
                     La manufacture dispose d'une dizaine de filiales ainsi que d'une boutique en ligne. La maison produit en moyenne 40 000 pièces par an,
                     toutes confectionnées à la main.

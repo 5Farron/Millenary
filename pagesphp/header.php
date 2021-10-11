@@ -1,13 +1,13 @@
 <header>
     <div>
-        <img src="images/logo.png">
+        <img src="images/logo.png" alt="Millenary">
     </div>
     <div>
         <ul>
             <a href="index.php?categorie=1"><li>Accueil</li></a>
             <a href="index.php?categorie=2"><li>Collection</li></a>
             <a href="index.php?categorie=3"><li>A propos de nous</li></a>
-            <!--<a href="index.php?categorie=4"><li>Contact</li></a>-->
+            <a href="index.php?categorie=4"><li>Contact</li></a>
             <?php
                 if (isset($_SESSION['personne'])) {
                     echo '<a href="index.php?categorie=5"><li>Profil</li></a>';
@@ -24,7 +24,7 @@
                 echo '<a onclick="document.querySelector(\'#signIn\').classList.add(\'active\');"><li>Se connecter</li></a>';
             } else echo '<a href="pagesphp/unlog.php"><li>Deconnexion</li></a>';
         ?>
-        </ul>       
+        </ul>    
     </div>
     <!-- S'inscrire' Popup -->
     <div class="modal" id="signUp">

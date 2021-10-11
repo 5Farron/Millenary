@@ -1,15 +1,22 @@
-* {box-sizing: border-box;}
-
 body {
-    background: url(../images/montrecollection6.jpg) no-repeat;
+    background: url(../images/montrecollection1.jpg) no-repeat;
     background-size: cover;
     font-family: 'Raleway', sans-serif;
+    list-style: none;
     height: 100vh;
 }
 
 .container {
     min-height: 15vh;
     margin: 3% 8%;
+    border-radius: 5px;
+    background-color: #ffffffbd;
+    padding: 4%;
+    line-height: 2.5;
+}
+
+.containerbis {
+    min-height: 15vh;
     border-radius: 5px;
     background-color: #ffffffbd;
     padding: 4%;

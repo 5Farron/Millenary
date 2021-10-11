@@ -1,0 +1,22 @@
+footer{
+    display:flex; 
+    bottom:0px;
+    height:100%;
+    width:100%;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+}
+
+footer div.div_footer{
+    display: flex;flex-direction:row ;
+}
+
+footer div#icon img{
+    background-color: white;
+    border-radius: 20%;
+    height: 50px;
+    display: flex;
+    flex-direction:column;
+    margin: 20px 20px 5px 20px;
+}

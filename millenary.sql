@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 04 fév. 2021 à 16:08
+-- Généré le :  mer. 17 fév. 2021 à 12:22
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.4.0
 
@@ -46,13 +46,20 @@ CREATE TABLE IF NOT EXISTS `achat` (
 
 DROP TABLE IF EXISTS `acheter_montre_achat`;
 CREATE TABLE IF NOT EXISTS `acheter_montre_achat` (
+  `numpanier` int(4) NOT NULL AUTO_INCREMENT,
   `nummontre` int(11) NOT NULL,
-  `numachat` int(11) NOT NULL,
-  `qte` int(11) NOT NULL,
-  PRIMARY KEY (`nummontre`,`numachat`),
-  KEY `nummontre` (`nummontre`),
-  KEY `numachat` (`numachat`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `libellemontre` varchar(50) NOT NULL,
+  `qte` int(5) NOT NULL,
+  PRIMARY KEY (`numpanier`)
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `acheter_montre_achat`
+--
+
+INSERT INTO `acheter_montre_achat` (`numpanier`, `nummontre`, `libellemontre`, `qte`) VALUES
+(34, 4, 'GMT - MASTER II', 1),
+(33, 4, 'GMT - MASTER II', 1);
 
 -- --------------------------------------------------------
 
@@ -89,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `mdpclient` varchar(255) NOT NULL,
   PRIMARY KEY (`numclient`),
   UNIQUE KEY `emailclient` (`emailclient`)
-) ENGINE=InnoDB AUTO_INCREMENT=169 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=170 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `client`
@@ -103,7 +110,8 @@ INSERT INTO `client` (`numclient`, `nomclient`, `emailclient`, `mdpclient`) VALU
 (158, 'starwix', 'starwix@gmail.com', 'starwix'),
 (161, 'marius', 'marius@gmail.com', 'marius'),
 (162, 'emerick', 'emerick@gmail.com', 'emerick'),
-(164, 'thais', 'thais@gmail.com', 'thais');
+(164, 'thais', 'thais@gmail.com', 'thais'),
+(169, 'Arthur', 'arthur@gmail.com', '123456');
 
 -- --------------------------------------------------------
 
@@ -145,13 +153,6 @@ INSERT INTO `montre` (`nummontre`, `libellemontre`, `descrptionmontre`, `prixmon
 --
 ALTER TABLE `achat`
   ADD CONSTRAINT `achat_ibfk_1` FOREIGN KEY (`numclient`) REFERENCES `client` (`numclient`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `acheter_montre_achat`
---
-ALTER TABLE `acheter_montre_achat`
-  ADD CONSTRAINT `acheter_montre_achat_ibfk_1` FOREIGN KEY (`nummontre`) REFERENCES `montre` (`nummontre`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `acheter_montre_achat_ibfk_2` FOREIGN KEY (`numachat`) REFERENCES `achat` (`numachat`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `montre`
